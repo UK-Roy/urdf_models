@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/uk_roy/ros/devel/include/**",
+        "/home/uk_roy/ros/src/hector_slam/hector_geotiff/include/**",
+        "/home/uk_roy/ros/src/hector_slam/hector_map_tools/include/**",
+        "/home/uk_roy/ros/src/hector_slam/hector_mapping/include/**",
+        "/home/uk_roy/ros/src/hector_slam/hector_marker_drawing/include/**",
+        "/home/uk_roy/ros/src/iai_kinect2_opencv4/kinect2_bridge/include/**",
+        "/home/uk_roy/ros/src/iai_kinect2_opencv4/kinect2_calibration/include/**",
+        "/home/uk_roy/ros/src/iai_kinect2_opencv4/kinect2_registration/include/**",
+        "/home/uk_roy/ros/src/make_shape/include/**",
+        "/home/uk_roy/ros/src/open_manipulator/open_manipulator_control_gui/include/**",
+        "/home/uk_roy/ros/src/open_manipulator/open_manipulator_controller/include/**",
+        "/home/uk_roy/ros/src/open_manipulator/open_manipulator_libs/include/**",
+        "/home/uk_roy/ros/src/open_manipulator/open_manipulator_teleop/include/**",
+        "/home/uk_roy/ros/src/pluto-ros-package/plutodrone/include/**",
+        "/home/uk_roy/ros/src/pluto-ros-package/plutoserver/include/**",
+        "/home/uk_roy/ros/src/open_manipulator_dependencies/roboticsgroup_gazebo_plugins/include/**",
+        "/home/uk_roy/ros/src/sjtu-drone/include/**",
+        "/home/uk_roy/ros/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/uk_roy/ros/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+<param name="robot_description" command="$(find xacro)/xacro $(find base_new_description)/urdf/base_new.xacro"/>
+
+<!--node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model base_new"/-->
+
+<!-- Load joint controller configurations from YAML file to parameter server -->
+<rosparam file="$(find base_new_description)/launch/controller.yaml" command="load"/>
+
+<!-- load the controllers -->
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/base_new" args="Rev11_position_controller left_front_wheel_position_controller right_front_wheel_position_controller right_rear_wheel_position_controller left_rear_wheel_position_controller joint_state_controller "/>
+
+<!-- send fake joint values -->
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+
+<!-- convert joint states to TF transforms for rviz, etc -->
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/base_new/joint_states"/>
+</node>
+
+<!-- Show in Rviz   -->
+<arg name="rvizconfig" default="$(find base_new_description)/launch/urdf.rviz"/>
+<node name="rviz" pkg="rviz" args="-d $(arg rvizconfig)" type="rviz" required="true"/>
+
+</launch>
